@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>DIGITAL PORTFOLIO</title>
+<style>
+body 
+{
+	font-family: courier new, arial;
+	background-color: lightgreen;
+	margin: 20px;
+	padding: 10px;
+}
+header 
+{
+   background-color: darkorange;
+   color: DarkGreen;
+   position: Relative;
+   text-align: center;
+   padding: 20px;
+}
+
+.header-content h1
+{
+  font size:20px;
+}
+
+.Profile-Picture
+{
+  width:80px;
+  height:80px;
+  border-radius:100%;
+  object-fit:cover;
+  position:absolute;
+  top:60px;
+  left:60px;
+}
+
+nav
+{
+  display:inline;
+  background-color: darkpink;
+  margin: 20px;
+  text-align:center;
+}
+
+nav ul
+{
+  list-style-type:none;
+   padding:0;
+}
+
+nav ul li
+{
+   display: inline;
+   margin: 0 20px;
+}
+
+nav ul li a 
+{
+   text-decoration: underline;
+   color: darkblue;
+}
+
+.section-content
+{
+   border:4px;
+   background-color:Yellow
+   padding: 20px;
+   margin: 10px;
+   box-shadow: 6px 1px salmon;
+}
+
+.button-type
+{
+  background-color:green;
+  color:res;
+  padding:5rem 1rem;
+  text-decoration:none;
+  border-radius:20px;
+  display:inline-block;
+  margin-top:10px;
+}
+
+footer
+{
+  text-align:center;
+  padding:1rem;
+  background-color:cyan;
+  color:brown;
+}
+
+.button-type:hover
+{
+  background-color:yellow;
+}
+
+document.addEventListener("DOMContentLoaded"),function () 
+{
+  document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+  e.preventDefault();
+  const targetId = this.getAttribute('href').substring(1);
+  const target = document.getElementById(targetId);
+  window.scrollTo
+  ({
+  top: target.offsetTop - 50,
+  behavior: 'smooth'
+});
+});
+});
+});
+</style>
+</head>
+<body>
+<center><header>
+<div class="header-content">
+<img src="pachai.jpg" alt="My Profile Picture" class="Profile-Picture">
+<h1>PACHAIYAPPAN R</h1>
+<p>College Student</p>
+</div>
+</header></center>
+
+<nav>
+<ul type="disc">
+   <li><a href="#about">ABOUT</a></li>
+   <li><a href="#Education>EDUCATIONS</a></li>
+   <li><a href="#Skills>SKILLS</a></li>
+   <li><a href="#projects">PROJECTS</a></li>
+   <li><a href="#contact">CONTACT</a></li>
+</ul>
+</nav>
+
+<section id="about">
+<div class="section-content">
+<h2>ABOUT MYSELF</h2>
+<p> Hello everyone, This is Pachaiyappan and I am a Computer Application student.</p>
+</div>
+</section>
+
+<section id="education">
+<div class="section-content">
+<h2>EDUCATION</h2>
+<p>Bachelor of Computer Application</p>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-content">
+<h2>SKILLS</h2>
+<ol>
+  <li>Problem solving</li>
+  <li>Creativity</li>
+  <li>Administrative</li>
+</ol>
+</div>
+</section>
+
+<section id="projects">
+<div class="section-content">
+<h2>PROJECTS</h2>
+<ol type="A">
+  <li><a href="PROJECT 1.html">PROJECT 1</a></li>
+  <li><a href="PROJECT 2.html">PROJECT 2</a></li>
+</ol>
+</div>
+</section>
+
+<section id="contact">
+<div class="section-content">
+<h2>Contact Information</h2>
+<p>G-mail:pachaiyappan.010@gmail.com</p>
+</div>
+</section>
+
+<footer>
+<p>&copy;2023 Pachaiyappan R</p>
+</footer>
+
+</body>
+</html>

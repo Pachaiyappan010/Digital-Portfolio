@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Change Text</title>
+</head>
+<body bgcolor="plum">
+<h1><B><I><U>Click The Button To Change The Text</B></I></U></h1>
+<p id="text">Hello!!</p>
+<button id="changeTextButton" onClick="changeText()">Click Me</button>
+
+<script>
+function changeText()
+{
+  var NewText = "How are you??";
+  document.getElementById("text").innerHTML = NewText;
+}
+</script>
+</body>
+</html>

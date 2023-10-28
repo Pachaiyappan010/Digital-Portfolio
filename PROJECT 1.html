@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>To Do List</title>
+</head>
+<body bgcolor="LightPink">
+<center>
+<h1><b><i><u><font color="red"> To Do List</font></u></i></b></h1>
+<input type="text" id="task" placeholder="Add a new task"><br><br>
+<button id="add">ADD</button>
+<ul type="disc" id="taskList">
+</ul>
+<script>
+const addBtn = document.getElementById('add');
+const taskInput = document.getElementById('task');
+const taskList = document.getElementById('taskList');
+
+addBtn.addEventListener('click', () => 
+{
+const taskText = taskInput.value.trim();
+if (taskText !== '') 
+{
+const taskItem = document.createElement('li');
+taskItem.textContent = taskText;
+taskItem.addEventListener('click', () => {
+taskItem.classList.toggle('completed');
+});
+taskList.appendChild(taskItem);
+taskInput.value = '';
+}
+});
+</script>
+<style>
+ul 
+{
+  list-style: none;
+  padding: 0;
+}
+
+li
+{
+  cursor: pointer;
+}
+
+.completed 
+{
+  text-decoration: line-through;
+}
+</center>
+</style>
+</body>
+</html>
